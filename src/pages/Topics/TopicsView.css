@@ -1,0 +1,139 @@
+.topics-page {
+    padding: 2rem;
+}
+
+.topics-header {
+    margin-bottom: 2rem;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .topics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .topics-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.topic-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--slate-100);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.topic-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.topic-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.topic-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--indigo-100);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic-icon {
+    color: var(--indigo-600);
+}
+
+.topic-count {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--slate-800);
+}
+
+.topic-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--slate-800);
+    margin: 0 0 0.5rem 0;
+}
+
+/* Badges */
+.topic-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.difficulty-tag {
+    padding: 0.125rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+.difficulty-tag.ease {
+    background-color: var(--emerald-100);
+    color: var(--emerald-700);
+}
+
+.difficulty-tag.medium {
+    background-color: var(--amber-100);
+    color: var(--amber-700);
+}
+
+.difficulty-tag.hard {
+    background-color: var(--red-100);
+    color: var(--red-700);
+}
+
+/* Footer */
+.topic-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-label {
+    font-size: 0.75rem;
+    color: var(--slate-500);
+}
+
+.confidence-dot-sm {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: var(--slate-200);
+}
+
+.confidence-dot-sm.filled {
+    background-color: var(--indigo-500);
+}
+
+.empty-topics {
+    grid-column: 1 / -1;
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid var(--slate-100);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
