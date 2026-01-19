@@ -41,7 +41,7 @@ const Dashboard = () => {
             <div className="dashboard-header">
                 <div>
                     <h2 className="page-title">Dashboard</h2>
-                    <p className="page-subtitle">Track your interview preparation progress</p>
+                    <p className="page-subtitle">Track your interview preparation progress (v1.1)</p>
                 </div>
                 <DarkMode />
 
