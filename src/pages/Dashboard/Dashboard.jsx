@@ -4,6 +4,7 @@ import QuestionCard from '../../components/QuestionCard';
 import { List, BookOpen, AlertCircle, Search } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
+import DarkMode from './DarkMode';
 
 const StatCard = ({ title, value, icon: Icon, colorClass, subtext }) => (
     <div className="stat-card">
@@ -42,15 +43,9 @@ const Dashboard = () => {
                     <h2 className="page-title">Dashboard</h2>
                     <p className="page-subtitle">Track your interview preparation progress</p>
                 </div>
-                {/* <div className="search-wrapper">
-                    <Search className="search-icon" size={20} />
-                    <input
-                        type="text"
-                        placeholder="Search questions..."
-                        className="search-input"
-                        onClick={() => navigate('/questions')}
-                    />
-                </div> */}
+                <DarkMode />
+
+
             </div>
 
             {/* Stats Grid */}

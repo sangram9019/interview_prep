@@ -8,6 +8,8 @@ import QuestionsList from './pages/Questions/QuestionsList';
 import QuestionForm from './pages/Form/QuestionForm';
 import TopicsView from './pages/Topics/TopicsView';
 
+import QuestionDetails from './pages/QuestionDetails/QuestionDetails';
+
 function App() {
   return (
     <Router>
@@ -16,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/questions" element={<QuestionsList />} />
+            <Route path="/questions/:id" element={<QuestionDetails />} />
             <Route path="/add" element={<QuestionForm />} />
             <Route path="/edit/:id" element={<QuestionForm />} />
             <Route path="/topics" element={<TopicsView />} />

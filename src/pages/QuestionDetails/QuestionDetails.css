@@ -1,0 +1,243 @@
+.details-page {
+    padding: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: var(--slate-500);
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.back-btn:hover {
+    color: var(--slate-800);
+}
+
+body.dark .back-btn:hover {
+    color: var(--slate-200);
+}
+
+.details-container {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    border: 1px solid var(--slate-100);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+.details-header {
+    border-bottom: 1px solid var(--slate-100);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+.details-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.difficulty-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.difficulty-badge.easy {
+    background-color: var(--emerald-100);
+    color: var(--emerald-700);
+}
+
+.difficulty-badge.medium {
+    background-color: var(--amber-100);
+    color: var(--amber-700);
+}
+
+.difficulty-badge.hard {
+    background-color: var(--red-100);
+    color: var(--red-700);
+}
+
+.topic-badge {
+    background-color: var(--slate-100);
+    color: var(--slate-700);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.date-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--slate-400);
+    font-size: 0.875rem;
+}
+
+.question-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.3;
+}
+
+.details-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--slate-200);
+    background-color: var(--white);
+    color: var(--slate-600);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background-color: var(--slate-50);
+    color: var(--indigo-600);
+    border-color: var(--indigo-200);
+}
+
+/* Answer Section */
+.section-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--slate-500);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.markdown-content {
+    color: var(--slate-800);
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.no-answer {
+    color: var(--slate-400);
+    font-style: italic;
+}
+
+/* Markdown Styling Defaults */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+    color: var(--slate-900);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-content p {
+    margin-bottom: 1.25rem;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+}
+
+.markdown-content li {
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content pre {
+    background-color: #0d1117;
+    /* GitHub Dark bg */
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+.markdown-content code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background-color: var(--slate-100);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+}
+
+.markdown-content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #e6edf3;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid var(--indigo-200);
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: var(--slate-600);
+    font-style: italic;
+}
+
+/* Dark Mode Overrides */
+body.dark .details-container {
+    background-color: var(--slate-100);
+    /* Dark card bg */
+    border-color: var(--slate-200);
+}
+
+body.dark .details-header {
+    border-bottom-color: var(--slate-200);
+}
+
+body.dark .question-title {
+    color: var(--slate-800);
+    /* Inverted var actually means light text */
+}
+
+body.dark .topic-badge {
+    background-color: var(--slate-200);
+    color: var(--slate-600);
+    /* Inverted */
+}
+
+body.dark .action-btn {
+    background-color: var(--slate-100);
+    border-color: var(--slate-200);
+    color: var(--slate-600);
+}
+
+body.dark .action-btn:hover {
+    background-color: var(--slate-200);
+}
+
+body.dark .markdown-content {
+    color: var(--slate-800);
+}
+
+body.dark .markdown-content code {
+    background-color: var(--slate-50);
+    /* Darker in dark mode if inverted correctly, or adjust manually */
+    color: var(--emerald-400);
+}
+
+body.dark .markdown-content pre code {
+    color: #e6edf3;
+    /* Keep code block text light */
+}

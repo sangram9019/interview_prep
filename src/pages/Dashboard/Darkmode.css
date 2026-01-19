@@ -1,0 +1,34 @@
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--slate-200);
+}
+
+/* In dark mode, change hover background */
+body.dark .theme-toggle-btn:hover {
+    background-color: var(--slate-700);
+}
+
+.theme-icon {
+    color: var(--slate-600);
+}
+
+/* In dark mode, icon color changes */
+body.dark .theme-icon {
+    color: var(--slate-300);
+}
+
+.sun-icon {
+    color: var(--amber-600);
+
+}

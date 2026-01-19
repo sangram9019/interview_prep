@@ -42,7 +42,12 @@ const QuestionCard = ({ question }) => {
         <div className="question-card">
             <div className="flex items-start">
                 <div>
-                    <h4 className="question-text">{question.question}</h4>
+                    <h4
+                        className="question-text clickable"
+                        onClick={() => navigate(`/questions/${question.__backendId}`)}
+                    >
+                        {question.question}
+                    </h4>
                     {question.answer && (
                         <p className="answer-text mono">
                             {question.answer.length > 150

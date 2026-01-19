@@ -3,7 +3,7 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Colors - Replicating Tailwind Palette */
+
   --slate-50: #f8fafc;
   --slate-100: #f1f5f9;
   --slate-200: #e2e8f0;
@@ -53,6 +53,50 @@ body {
   color: var(--slate-800);
   height: 100vh;
   box-sizing: border-box;
+}
+
+/* Dark Mode Overrides */
+.dark {
+
+
+  /* Backgrounds: Invert Slates */
+  --slate-50: #0f172a;
+  /* Deep dark blue */
+  --slate-100: #1e293b;
+  /* Slightly lighter (Cards) */
+  --slate-200: #334155;
+  /* Borders */
+
+  /* Text: Invert Slates */
+  --slate-500: #94a3b8;
+  /* Muted text */
+  --slate-600: #cbd5e1;
+  --slate-700: #e2e8f0;
+  --slate-800: #f1f5f9;
+  /* Main text */
+
+  /* White becomes Dark Card Background */
+  --white: #1e293b;
+  /* Accents: Make them slightly lighter/more vibrant for dark backgrounds */
+  --indigo-50: rgba(79, 70, 229, 0.2);
+  /* Transparent indigo for backgrounds */
+  --indigo-100: rgba(79, 70, 229, 0.3);
+  --indigo-500: #818cf8;
+  /* Lighter indigo */
+  --indigo-600: #6366f1;
+
+  --emerald-100: rgba(16, 185, 129, 0.2);
+  --emerald-700: #34d399;
+  /* Light green text */
+
+  --amber-100: rgba(245, 158, 11, 0.2);
+  --amber-700: #fbbf24;
+  /* Light amber text */
+
+  --red-50: rgba(239, 68, 68, 0.1);
+  --red-100: rgba(239, 68, 68, 0.2);
+  --red-700: #f87171;
+  /* Light red text */
 }
 
 *,
